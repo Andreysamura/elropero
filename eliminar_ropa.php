@@ -9,13 +9,14 @@ $codigo = $_GET['cod_ropa'] ;
 //sql de eliminacion de ropa
 $consulta = "DELETE FROM producto WHERE cod_ropa=$codigo";
 
+// creamos una condicional, si se elimina -->
 if (mysqli_query($conn, $consulta)) {
-  //echo "<br>Ropa eliminado correctamente";
-  //regresar a la pagina anterior
+  
+  // --> nos regresar a la pagina anterior
   header("location: index.php");
-} else {
+} else { // de lo contrario error al eliminarlo
   echo "<br>Error al eliminar la ropa: " . mysqli_error($conn);
 }
 
-mysqli_close($conn);
+mysqli_close($conn); //cerramos conexion
 ?>

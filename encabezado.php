@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
-<!--Estilo de encabezado o navegador -->
+<!--Estilo de encabezado o navegador por un css -->
 <style> 
 .bg{
     background: #FFBB58;
@@ -18,7 +18,7 @@
     <body>
     <header>
         <div><!--Navegador o apartado menu de alta, venta y inventario de productos-->
-            <nav class="navbar navbar-expand-lg fixed-top bg mb fst-italic">
+            <nav class="navbar navbar-expand-lg fixed-top bg mb fst-italic fw-bolder shadow rounded fs-5">
                 <div class="container-fluid">  <!-- Inicio del div contenedor principal-->
                     <a class="navbar-brand">
                         <img src="img/roperos.png" alt="" width="40" height="28" class="d-inline-block align-text-top">El Ropero
@@ -38,7 +38,7 @@
             </nav>
         </div>
             
-            <!-- Slide de imagenes -->
+            <!-- Slide de imagenes o carrusel para darle mas vista -->
                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"><!-- Contenedor principals de las imagenes -->
                         <div class="carousel-inner"> <!-- Contenedor interno -->
                             <div class="carousel-item active bound"> <!-- imagen 1 -->

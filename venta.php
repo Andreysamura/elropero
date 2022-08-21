@@ -15,7 +15,7 @@ include("encabezado.php")
 
 
             <!-- Buscador -->
-            <div class="container shadow rounded mt-3">
+            <div class="container shadow rounded mt-3 bg">
                 <nav class="navbar">
                     <form class="container-fluid" method="GET" action="#">
                     <div class="input-group">
@@ -27,11 +27,11 @@ include("encabezado.php")
             </div>
             
         <section><!--Tabla de prendas para vender-->
-            <div class="container table-responsive bg-light shadow grounded mt-2">
+            <div class="container table-responsive bg shadow grounded mt-2">
                 <div class="col-lg-12">
                     <h2 class="text-center text-muted mt-2 fw-bolder"> Ropa para Venta</h2>
                     <a class="btn btn-info mb-2" href="registro_venta.php">Registro de ventas</a>
-                    <table class="table table-info table-bordered text-center">
+                    <table class="table table-secondary table-bordered text-center">
                         <thead class="table-dark">
                             <tr>
                                 <th>Codigo</th>

@@ -10,12 +10,12 @@
 
   <body>
      
-      <?php //parte de encabezado
+      <?php //llamos el encabezado con un include mediante php
       include("encabezado.php")
       ?>
 
         <!--Creacion del buscador de la tabla porducto-->
-        <div class="container shadow rounded mt-2">
+        <div class="container shadow rounded mt-2 bg">
           <nav class="navbar">
             <form class="container-fluid" method="GET" action="#">
               <div class="input-group">
@@ -28,12 +28,13 @@
         </div>
 
       <section><!--Tabla que muestra los productos en existencia-->        
-        <div class="container table-responsive bg-light shadow rounded mt-3 mb-3">
+        <div class="container table-responsive shadow rounded mt-3 mb-3 bg">
           <div class="col-lg-12">
             <h1 class="text-center text-muted mt-2"> Inventario de ropa</h1>
-            <table class="table table-info table-bordered text-center">
+            <table class="table table-warning table-bordered text-center">
               <thead class="table-dark">
-                <a class='btn btn-info mb-2' href='registro.php'> Agregar </a>
+                <a class='btn btn-dark mb-2' href='registro.php'> Agregar </a>
+                <!-- fila del encabezado de la tabla -->
                   <tr>
                     <th>Código</th>
                     <th>Modelo</th>
@@ -50,15 +51,17 @@
                   include("conexion.php"); //LLamada de la conexionde BD 
                   //Resultado de la busqueda de la tabla producto mediante columnas
 
-                  if(isset($_GET["busqueda"])){
+                  if(isset($_GET["busqueda"])){ //consulta de la busqeuda mediante sus caracteristixas
                   $busqueda=$_GET["busqueda"];
                   $consulta="SELECT * FROM producto where modelo like '%$busqueda%' OR tipo like '%$busqueda%' OR talla like '%$busqueda%' OR precio like '%$busqueda%' OR cantidad like '%$busqueda%' OR cod_ropa like '%$busqueda%'OR fecha_registro like '%$busqueda%'";
                   }
                   else{
-                      $consulta="SELECT * FROM producto";
+                      $consulta="SELECT * FROM producto"; // consulta a la BD
                   }
 
+                  // resultado cde la BD y se imprima en las tablas
                   $resultado=mysqli_query($conn,$consulta);
+                  // creamos un if y una condicional
                   if(mysqli_num_rows($resultado)>0)
                     {
                       while($fila=mysqli_fetch_assoc($resultado))
@@ -70,7 +73,7 @@
                         echo "<td>".$fila['tipo']."</td>";
                         echo "<td>".$fila['precio']."</td>";
                         echo "<td>".$fila['cantidad']."</td>";
-                        echo "<td> <a class='btn btn-danger' href='eliminar_ropa.php?cod_ropa=".$fila['cod_ropa']."'> Eliminar </a> <a class='btn btn-warning' href='actualizar_ropa.php?cod_ropa=".$fila['cod_ropa']."&modelo=".$fila['modelo']."&talla=".$fila['talla']."&tipo=".$fila['tipo']."&precio=".$fila['precio']."&cantidad=".$fila['cantidad']."'> Modificar </a> </td>";
+                        echo "<td> <a class='btn btn-danger' href='eliminar_ropa.php?cod_ropa=".$fila['cod_ropa']."'> Eliminar </a> <a class='btn btn-primary' href='actualizar_ropa.php?cod_ropa=".$fila['cod_ropa']."&modelo=".$fila['modelo']."&talla=".$fila['talla']."&tipo=".$fila['tipo']."&precio=".$fila['precio']."&cantidad=".$fila['cantidad']."'> Modificar </a> </td>";
                         echo "</tr>";
                         }
                     } else {

@@ -1,5 +1,5 @@
 <?php
-
+// declaramos variavles para recibir y rellenar la BD
 echo "<h2>Recibiendo informacion del formulario de registro</h2>";
 $codigo=$_POST['codigo'];
 echo "El codigo del producto es: ".$codigo."<br>";
@@ -25,10 +25,9 @@ $sql="INSERT INTO producto VALUES (id_registro, $codigo,'$modelo',$talla,'$tipo'
 //evaluar si se registro correctamente de la ropa
 if(mysqli_query($conn,$sql))
 {
-    //echo "Ropa registrado correctamente";
     //regresar a la pagina anterior
     header("location: registro.php");
-}
+} // de lo contrario erro
 else{
     echo "Error: ".$sql. "<br>".mysqli_error($conn);
 }

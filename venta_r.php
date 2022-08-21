@@ -1,5 +1,5 @@
 <?php
-
+// declaramos variables para recibir los datos de lo qeu se vendera
 echo "<h2>Recibiendo informacion del formulario de venta</h2>";
 $codigo=$_POST['codigo'];
 echo "El codigo del producto es: ".$codigo."<br>";

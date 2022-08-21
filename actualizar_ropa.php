@@ -22,13 +22,13 @@
     </head>
 
     <body>
-        <?php //parte de encabezado
+        <?php // llamamos el encabezado por un include mediante php
         include("encabezado.php")
         ?>
 
 <!-- Formulario de registro -->
 
-        <section class="container xl-5 bg-light mt-3 rounded shadow">
+        <section class="container xl-5 mt-3 rounded shadow bg">
             <div class="row">
                 <div class="col-lg-6">
                     <h3 class="text-center text-muted mt-2">Modificacion de ropa</h3>
@@ -45,7 +45,7 @@
 
 
                         ?>
-
+                            <!-- inicia las filas de los datos de la ropa -->
                         <div class="row mb-3">
                             <label class="col-sm-10">Codigo de ropa</label>
                             <div class="col-sm-10">
@@ -88,18 +88,20 @@
                             </div>
                         </div>
 
+                        <!-- creamos un boton para actualizar los datos de la vestimenta -->
                         <div class="d-grid gap-2 col-6 mx-auto">
                             <button class="btn btn-success mb-3">Actualizar</button>
                         </div>
                     </form>
                 </div>
+                <!-- dentro de una duicion agregamos una imagen para dar estilo -->
                 <div class="col-lg-6 d-none d-lg-block col-md-4 col-lg-5 col-lg-6 mt-5"> 
                     <img src="img/ropasde.png" width="450px" height="450px">
                 </div>
             </div>
-        </section>
+        </section> <!-- fin de la seccion -->
         
-    <?php //parte del pie de pagina
+    <?php //pie de pagina llamado por un include mediante php
       include("pie_de_pagina.php")
     ?>
 

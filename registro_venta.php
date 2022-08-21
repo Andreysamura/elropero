@@ -14,7 +14,7 @@ include("encabezado.php")
 ?>
 
     <!--Creacion del buscador de la tabla ventas que se han realizado-->
-        <div class="container shadow rounded mt-3">
+        <div class="container shadow rounded mt-3 bg">
           <nav class="navbar">
             <form class="container-fluid" method="GET" action="#">
               <div class="input-group">
@@ -33,6 +33,7 @@ include("encabezado.php")
                     <table class="table table-info table-bordered text-center">
                         <thead class="table-dark">
                             <tr>
+                                <!-- fila de encabezado -->
                                 <th>ID</th>
                                 <th>Codigo De Ropa</th>
                                 <th>Cliente</th>
@@ -58,6 +59,7 @@ include("encabezado.php")
                             }
 
                             $resultado=mysqli_query($conn,$consulta);
+                            // si la consulta es correta, un if con un while
                             if(mysqli_num_rows($resultado)>0)
                             {
                                 while($fila=mysqli_fetch_assoc($resultado))
@@ -85,7 +87,7 @@ include("encabezado.php")
                     </table>
                 </div>
             </div>      
-        </section>
+        </section> <!-- fin de la seccion -->
         
 
 

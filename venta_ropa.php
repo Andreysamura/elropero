@@ -29,7 +29,7 @@
 
 <!-- Formulario de registro -->
 
-        <section class="container bg-light mt-3 shadow">
+        <section class="container mt-3 shadow bg">
             <div class="row">
                 <div class="col-lg-6">
                     <h3 class="text-center text-muted mt-2">Venta de calzado</h3>
@@ -102,8 +102,9 @@
                                 <input type="date" name="fecha_registro" required class="form-control">
                             </div>
                         </div>
-
-                        <div class="d-grid gap-2 col-6 mx-auto">
+                        
+                        <!-- boton para ejercer la venta -->
+                        <div class="d-grid gap-2 col-6 mx-auto"> 
                             <button class="btn btn-success mb-3">Vender</button>
                         </div>
                     </form>

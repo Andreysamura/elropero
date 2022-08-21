@@ -25,7 +25,7 @@
 
 <!-- Formulario de registro -->
 
-        <section class="container bg-light shadow rounded mt-4"><!-- Contenedor-->
+        <section class="container shadow rounded mt-4 bg"><!-- Contenedor-->
             <div class="row">
                 <div class="col-lg-4">
                     <h3 class="text-center text-muted mt-2">Registro de ropa</h3>
@@ -108,7 +108,8 @@
                                 <th>Fecha de registro</th>
                             </tr>
                         </thead>
-
+                            
+                        <!-- hacemos las consultas correspodniente mediante php -->
                                 <?php
                                     include("conexion.php");
                                     $consulta="SELECT * FROM producto";
